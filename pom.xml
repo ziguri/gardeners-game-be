@@ -1,0 +1,13 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"><modelVersion>4.0.0</modelVersion>
+<groupId>ctw</groupId><artifactId>gardeners</artifactId><version>1.0</version>
+<properties><maven.compiler.release>21</maven.compiler.release><quarkus.version>3.15.1</quarkus.version></properties>
+<dependencyManagement><dependencies><dependency><groupId>io.quarkus.platform</groupId><artifactId>quarkus-bom</artifactId><version>${quarkus.version}</version><type>pom</type><scope>import</scope></dependency></dependencies></dependencyManagement>
+<dependencies>
+<dependency><groupId>io.quarkus</groupId><artifactId>quarkus-rest-jackson</artifactId></dependency>
+<dependency><groupId>io.quarkus</groupId><artifactId>quarkus-hibernate-orm-panache</artifactId></dependency>
+<dependency><groupId>io.quarkus</groupId><artifactId>quarkus-jdbc-postgresql</artifactId></dependency>
+<dependency><groupId>io.quarkus</groupId><artifactId>quarkus-security-jpa</artifactId></dependency>
+<dependency><groupId>io.quarkus</groupId><artifactId>quarkus-elytron-security-common</artifactId></dependency>
+</dependencies>
+<build><plugins><plugin><groupId>io.quarkus.platform</groupId><artifactId>quarkus-maven-plugin</artifactId><version>${quarkus.version}</version><extensions>true</extensions>
+<executions><execution><goals><goal>build</goal></goals></execution></executions></plugin></plugins></build></project>
